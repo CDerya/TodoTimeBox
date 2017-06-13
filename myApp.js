@@ -1,4 +1,7 @@
-var app = angular.module("myTodosList", []); 
+var app = angular.module("myTodosList", ["xeditable"]); 
+app.run(function(editableOptions) {
+  editableOptions.theme = 'bs3';
+});
 app.controller("myCtrl", function($scope) {
     $scope.products = ["study angular", "studyBootstrap", "make shit"];
     $scope.addItem = function () {
@@ -9,16 +12,11 @@ app.controller("myCtrl", function($scope) {
             $scope.addMe="";
         } else {
             $scope.errortext = "The item is already in your shopping list.";
-
         }
-
-        
     }
     $scope.removeItem = function (itemToBeRemoved) {
-        //$scope.errortext = "";    
         $scope.products.splice(itemToBeRemoved, 1);
-    }
-
+    }  
 });
 
   

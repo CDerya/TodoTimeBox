@@ -17,9 +17,9 @@ h1 {
 }
 
 #TodosList{
-   font-size:40 px;
+   font-size:40px;
    color: rgb(40,151,255);
-   list-style-type: none;
+text-decoration: none;
 }
 #addField{
    box-shadow: focus;
