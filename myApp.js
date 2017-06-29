@@ -3,7 +3,7 @@ app.run(function(editableOptions) {
   editableOptions.theme = 'bs3';
 });
 app.controller("myCtrl", function($scope) {
-    $scope.products = ["study angular", "studyBootstrap", "make shit"];
+    $scope.products = ["learn Angular", "learn Bootstrap", "make stuff"];
     $scope.addItem = function () {
         $scope.errortext = "";
         if (!$scope.addMe) {return;}        
