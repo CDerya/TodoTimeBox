@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TOmaDO</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+  	<link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+    <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+</head>
+<body>
+  <h1 >My Todos  <small>Use the text box below to add todos. Click on a todo to edit it.</small></h1>
+  <div  ng-app="myTodosList" ng-controller="myCtrl">
+
+  <div ng-repeat="x in products"> 
+    <a id= "TodosList" href="#" editable-text="x">{{x|| "empty" }}</a>
+  	<button type="button" class="btn btn-danger btn-sm " ng-click="removeItem($index)" > Delete</button>
+  </div>
+
+  <div id= "addTodos">
+    <input id= "addField" ng-model="addMe">
+    <button  type="button" class="btn btn-lg btn-success"  ng-click="addItem()">Add</button>
+    <p id= "errorMessage" >{{errortext}}</p>
+  </div>
+ </div>
+  <script src="myApp.js"></script>
+</body>
+</html>
+
+
+
